@@ -1456,18 +1456,32 @@
       statusDiv.style.display = 'block';
       statusDiv.style.color = '#10b981';
       statusDiv.innerHTML = `
-        <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid var(--green); border-radius: 12px; padding: 18px; margin-top: 10px;">
-          <div style="font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 6px;">🎉 Welcome aboard, ${name}!</div>
-          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 14px;">
-            Your email <code>${email}</code> is registered for the <strong>Google Play Closed Alpha</strong>.
-            You can now read or print the full playbook immediately:
+        <div style="background: rgba(16, 185, 129, 0.15); border: 2px solid var(--green); border-radius: 16px; padding: 24px; margin-top: 16px; text-align: left;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+            <div style="font-size: 20px; font-weight: 900; color: #fff;">🎉 Welcome to Closed Alpha, ${name}!</div>
+            <span class="badge-pill" style="margin-bottom: 0; background: rgba(16,185,129,0.2); border-color: var(--green); color: var(--green);">VIP INVITE UNLOCKED</span>
+          </div>
+          <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 16px;">
+            Your email <code>${email}</code> is registered into our Closed Alpha testing whitelist. You now have instant access to both the Android App and the field manual:
           </p>
-          <a href="playbook.html" class="btn-glow" style="padding: 10px 22px; font-size: 13px; text-decoration: none;">
-            📖 Read "The 2026 Junkyard Profit Playbook" Online Now →
-          </a>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px;">
+            <a href="YardScout.apk" download class="btn-glow" style="padding: 12px 24px; font-size: 14px; text-decoration: none;">
+              📲 Download YardScout Android APK (v1.0.0.1)
+            </a>
+            <a href="playbook.html" class="btn-outline" style="padding: 12px 24px; font-size: 14px; text-decoration: none; border-color: var(--cyan); color: var(--cyan);">
+              📖 Read 2026 Profit Playbook
+            </a>
+          </div>
+          <div style="background: rgba(7, 10, 17, 0.85); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+            <strong style="color: #fff;">📱 Installing on Android:</strong>
+            Tap the green button above on your Android phone to download <code>YardScout.apk</code> directly. When prompted, tap "Open" and "Install". You can immediately scan door jamb VIN barcodes at LKQ!
+            <br><br>
+            <strong style="color: var(--cyan);">🤖 Google Play Store Track:</strong>
+            If you prefer installing directly through the Google Play Store app, your email is whitelisted on package <code>com.radday.yardscout</code>. Open the <a href="https://play.google.com/apps/testing/com.radday.yardscout" target="_blank" style="color: var(--cyan); text-decoration: underline;">Google Play Closed Testing Opt-In Page</a> to accept the store invite.
+          </div>
         </div>
       `;
-      submitBtn.textContent = "✅ Playbook Unlocked!";
+      submitBtn.textContent = "✅ App Access Unlocked!";
     }
 
     // Admin & Lead Management
