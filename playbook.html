@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 2026 Junkyard Profit Playbook | YardScout</title>
+  <meta name="description" content="30 High-Margin OEM Modules & Electronics under $25 at LKQ that sell for $100-$300+ on eBay. The complete salvage yard flipping field manual.">
+  <link rel="icon" type="image/png" href="icons/icon.png">
+  
+  <style>
+    :root {
+      --bg-core: #070a11;
+      --bg-surface: #0e1526;
+      --bg-card: rgba(15, 23, 42, 0.85);
+      --border: rgba(51, 65, 85, 0.7);
+      --border-cyan: rgba(0, 242, 254, 0.4);
+      --border-green: rgba(16, 185, 129, 0.4);
+      --cyan: #00f2fe;
+      --green: #10b981;
+      --amber: #f59e0b;
+      --red: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-core);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: rgba(7, 10, 17, 0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .top-bar a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-print {
+      background: rgba(0, 242, 254, 0.15);
+      color: var(--cyan);
+      border: 1px solid var(--border-cyan);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-print:hover {
+      background: var(--cyan);
+      color: #070a11;
+    }
+
+    /* Header Cover */
+    .playbook-header {
+      text-align: center;
+      padding: 48px 0 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--border-green);
+      color: var(--green);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 40%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-bar {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      font-size: 13px;
+      color: var(--text-dim);
+      font-family: monospace;
+    }
+
+    /* Table of Contents */
+    .toc-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-cyan);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px 20px;
+    }
+
+    .toc-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover {
+      color: var(--cyan);
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin: 48px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border-cyan);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin: 28px 0 12px;
+    }
+
+    p, li {
+      color: #cbd5e1;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Part Card */
+    .part-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 24px 0 40px;
+    }
+
+    .part-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .part-card:hover {
+      border-color: var(--cyan);
+    }
+
+    .part-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .part-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .part-vehicle {
+      font-size: 13px;
+      color: var(--cyan);
+      font-family: monospace;
+      font-weight: 600;
+    }
+
+    .roi-badge {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .numbers-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      background: rgba(7, 10, 17, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .num-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .num-val {
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .intel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 600px) {
+      .intel-grid { grid-template-columns: 1fr; }
+    }
+
+    .intel-item span {
+      color: var(--text-dim);
+    }
+    .intel-item strong {
+      color: #f1f5f9;
+    }
+
+    .part-tip {
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 3px solid var(--amber);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #fef3c7;
+    }
+
+    /* Print styling */
+    @media print {
+      body { background: #fff; color: #111; }
+      .top-bar, .btn-print { display: none; }
+      .container { max-width: 100%; padding: 0; }
+      h1, h2, h3, .part-title { color: #000 !important; -webkit-text-fill-color: #000 !important; }
+      .part-card, .numbers-row, .toc-box { border: 1px solid #ccc; background: #fff; color: #111; }
+      .roi-badge { color: #059669; border-color: #059669; }
+      .part-tip { background: #fef3c7; color: #78350f; border-color: #d97706; }
+      p, li, .intel-item strong { color: #222 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <a href="index.html">
+      <span>←</span> Back to YardScout Showcase
+    </a>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <span style="font-size: 12px; color: var(--text-dim);">Confidential Closed Alpha Manual</span>
+      <button onclick="window.print()" class="btn-print">
+        <span>🖨️</span> Print / Save PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- HEADER -->
+    <header class="playbook-header">
+      <span class="badge">🔥 2026 Salvage Arbitrage Field Guide</span>
+      <h1>The 2026 Junkyard Profit Playbook</h1>
+      <p class="subtitle">
+        30 Under-the-Radar OEM Modules & Electronics under $25 at LKQ that sell for $100–$300+ on eBay.
+        Turn empty walking into $300+ weekend hauls.
+      </p>
+      <div class="meta-bar">
+        <span>PUBLISHED BY YARDSCOUT</span> • 
+        <span>VERIFIED LKQ FLAT RATES</span> • 
+        <span>UPDATED FOR 2026 MARKET DATA</span>
+      </div>
+    </header>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-box">
+      <div class="toc-title">📖 Quick Navigation</div>
+      <ul class="toc-list">
+        <li><a href="#mindset">1. The Yard Arbitrage Mindset</a></li>
+        <li><a href="#pack">2. The 8-Item Ultralight Yard Tool Pack</a></li>
+        <li><a href="#computers">3. Engine & Transmission Modules (ECU/TCM)</a></li>
+        <li><a href="#fuseboxes">4. Power Distribution & TIPMs</a></li>
+        <li><a href="#audio">5. Premium Factory Audio & Amps</a></li>
+        <li><a href="#hybrid">6. Hybrid Synergy & Electric Pumps</a></li>
+        <li><a href="#interior">7. High-Demand Interior Switches & Clusters</a></li>
+        <li><a href="#radar">8. ADAS Cameras & Blind Spot Radars</a></li>
+        <li><a href="#shipping">9. Packaging, Shipping & eBay Listing Secrets</a></li>
+      </ul>
+    </div>
+
+    <!-- 1. MINDSET -->
+    <section id="mindset">
+      <h2><span>⚡</span> 1. The Yard Arbitrage Mindset</h2>
+      <p>
+        Most people enter salvage yards looking for heavy iron: cylinder heads, alternators, transmissions, or body panels.
+        They spend 3 hours drenched in sweat, ruin their knuckles, carry 60 pounds of grease across 10 acres of gravel, and battle the cashier over pricing.
+      </p>
+      <p>
+        <strong>The YardScout Way is completely different:</strong>
+      </p>
+      <ul>
+        <li><strong>Pocket-Sized Electronics:</strong> We focus on modules that weigh under 2 pounds, slip into a backpack, and require 5 minutes or less to unbolt.</li>
+        <li><strong>Flat-Rate Blind Spots:</strong> LKQ and self-service yards price parts by generic categories—an "Amplifier" is flat-rate $30 whether it's an old base radio amp or a rare $295 Mark Levinson acoustic unit.</li>
+        <li><strong>Perpetual OEM Failure Demand:</strong> Vehicle owners do not buy cheap aftermarket knockoff computers; they require exact OEM part numbers to get their vehicles running.</li>
+      </ul>
+    </section>
+
+    <!-- 2. TOOL PACK -->
+    <section id="pack">
+      <h2><span>🧰</span> 2. The 8-Item Ultralight Yard Tool Pack</h2>
+      <p>Never haul a 50-pound steel tool box across the yard. Keep this minimal kit in a small backpack:</p>
+      <ul>
+        <li><strong>1/4" and 3/8" Ratchet</strong> with 3" and 6" extensions.</li>
+        <li><strong>Metric Sockets:</strong> 7mm, 8mm, 10mm (the king of junkyards), 12mm, 13mm, and 14mm.</li>
+        <li><strong>Torx Drivers:</strong> T15, T20, T25, T30 (essential for GM, Ford, and Chrysler steering columns and sensors).</li>
+        <li><strong>Nylon Trim Pry Bars:</strong> Pops dashboard bezels, window switches, and overhead consoles without scratching plastics.</li>
+        <li><strong>Multi-Bit Screwdriver:</strong> Phillips #2 and small flathead (crucial for electrical clip release tabs).</li>
+        <li><strong>Side Cutter / Flush Wire Pliers:</strong> For clipping stubborn zip ties or extracting harness pigtails cleanly.</li>
+        <li><strong>Fine-Tip Sharpie:</strong> To immediately write VIN, make, model, and year directly onto the module case.</li>
+        <li><strong>Compact 12V Pocket Multimeter or 9V Battery Tester:</strong> For quick continuity verification.</li>
+      </ul>
+    </section>
+
+    <!-- 3. COMPUTERS -->
+    <section id="computers">
+      <h2><span>💻</span> 3. Engine & Transmission Modules (ECU / PCM / TCM)</h2>
+      <div class="part-grid">
+
+        <!-- Part 1 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">1. GM LS Engine PCM / ECU (Part # 12589463 / 0411)</div>
+              <div class="part-vehicle">1999–2006 Chevy Silverado, Tahoe, Suburban 4.8L / 5.3L / 6.0L</div>
+            </div>
+            <span class="roi-badge">282% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$42.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$185.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$18.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$118.50</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Driver side engine bay, next to master cylinder</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>7mm, 10mm sockets, flathead</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>4 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Extremely High (50+ sold/month)</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> The Green/Blue 12589463 and Blue/Red 12200411 are the holy grail computers for LS-swap car builders. Unclip plastic shroud, loosen two 7mm harness bolts, slide out.
+          </div>
+        </div>
+
+        <!-- Part 2 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">2. GM 6-Speed Transmission Control Module (TCM)</div>
+              <div class="part-vehicle">2007–2013 Chevy Silverado, Tahoe, GMC Sierra 1500 (6L80E)</div>
+            </div>
+            <span class="roi-badge">385% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$35.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$195.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$12.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$142.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Front left inner fender battery bracket</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>10mm socket, ratchet</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>5 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Very High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Part numbers 24252114 and 24254908 are notorious for dealer backorders. Tested units command instant purchase.
+          </div>
+        </div>
+
+        <!-- Part 3 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">3. Honda / Acura Keihin Engine Control Module</div>
+              <div class="part-vehicle">2006–2015 Honda Civic, Accord, CR-V, Acura TSX</div>
+            </div>
+            <span class="roi-badge">252% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$42.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$170.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$16.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$106.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Engine bay beside air intake box</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>10mm socket, 6" extension</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>3 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Look for dry connectors with zero bent pins. Keihin units are indestructible unless waterlogged.
+          </div>
+        </div>
+
+        <!-- Part 4 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">4. GM Transfer Case Control Module (TCCM)</div>
+              <div class="part-vehicle">2003–2007 Chevy Silverado, Tahoe, Suburban, Yukon 4x4</div>
+            </div>
+            <span class="roi-badge">258% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$35.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$145.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$14.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$90.50</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Behind dashboard knee bolster left of steering column</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>7mm nutdriver, 10mm socket</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>6 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High in winter months</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Resolves "Service 4WD" light on GMT800 trucks. Sells fast to rust belt drivers during snow season.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. FUSE BOXES / TIPM -->
+    <section id="fuseboxes">
+      <h2><span>⚡</span> 4. Power Distribution & TIPM Fuse Modules</h2>
+      <div class="part-grid">
+
+        <!-- Part 5 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">5. Chrysler / Dodge / Jeep TIPM (Totally Integrated Power Module)</div>
+              <div class="part-vehicle">2008–2020 Dodge Grand Caravan, Town & Country, Ram 1500, Wrangler, Nitro</div>
+            </div>
+            <span class="roi-badge">415% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$45.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$240.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$24.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$165.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Main underhood fuse box beside battery</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>10mm socket, flathead screwdriver</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>4 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Highest in North America (60+ sold/month)</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> The infamous internal fuel pump relay failure causes nationwide backorders. Flip up the side tabs, disconnect the colored lever plugs beneath. Check bottom pins for green corrosion.
+          </div>
+        </div>
+
+        <!-- Part 6 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">6. Ford Smart Junction Box (SJB) / Body Control Module</div>
+              <div class="part-vehicle">2005–2014 Ford Mustang, F-150, Expedition, Explorer</div>
+            </div>
+            <span class="roi-badge">310% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$30.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$145.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$15.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$93.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Passenger front kick panel</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>Trim pry tool, 7mm, 10mm sockets</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>5 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Check the cowl drain above it. If dry and uncorroded, Mustang SJBs flip fast due to wiper/lighting relay faults.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. AUDIO -->
+    <section id="audio">
+      <h2><span>🎵</span> 5. Premium Factory Audio & Bluetooth Modules</h2>
+      <div class="part-grid">
+
+        <!-- Part 7 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">7. Acura ELS Surround Factory Sound Amplifier</div>
+              <div class="part-vehicle">2007–2013 Acura MDX, TL, TSX, RDX</div>
+            </div>
+            <span class="roi-badge">361% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$30.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$165.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$18.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$108.50</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Behind right rear quarter trim panel (or right trunk wall)</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>10mm socket, 6" extension, trim pry tool</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>5 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Look for Pioneer part # 39186-STX-A01. Water condensation from sunroof drains causes OEM amps to blow, keeping demand perpetually high.
+          </div>
+        </div>
+
+        <!-- Part 8 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">8. Acura Bluetooth HandsFreeLink (HFL) Module</div>
+              <div class="part-vehicle">2004–2008 Acura TL, 2007–2013 Acura MDX</div>
+            </div>
+            <span class="roi-badge">556% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$15.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$120.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$7.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$83.50</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Overhead console next to sunroof switch</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>Phillips #2, flat trim pry tool</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>2 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Very High (40+ sold/month)</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Fits right in your pocket. This module fails and drains car batteries overnight. 90% of Acura owners on forums are looking for tested replacements!
+          </div>
+        </div>
+
+        <!-- Part 9 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">9. Lexus Mark Levinson Audio Amplifier</div>
+              <div class="part-vehicle">2006–2015 Lexus RX350, IS250, GS350, LS460</div>
+            </div>
+            <span class="roi-badge">680% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$30.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$295.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$22.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$228.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Under rear trunk cargo floor or under passenger seat</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>10mm, 12mm sockets, plastic clip tool</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>6 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Moderate/High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> A genuine goldmine. LKQ charges their flat $30 amp price. Sells on eBay between $275 and $350. Never leave a Mark Levinson amp behind!
+          </div>
+        </div>
+
+        <!-- Part 10 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">10. Ford Sync 3 APIM Navigation Module</div>
+              <div class="part-vehicle">2016–2020 Ford F-150, Mustang, Explorer, Edge</div>
+            </div>
+            <span class="roi-badge">375% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$45.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$240.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$14.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$172.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Bolted directly behind center 8" touchscreen</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>7mm socket, trim pry tool</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>7 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Extremely High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Ford owners buying older 2011-2015 trucks snap these up to upgrade to Apple CarPlay / Android Auto. Massive resale velocity.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. HYBRID & PUMPS -->
+    <section id="hybrid">
+      <h2><span>🔋</span> 6. Hybrid Synergy & Electric Water Pumps</h2>
+      <div class="part-grid">
+
+        <!-- Part 11 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">11. Toyota Prius Gen 2 / Gen 3 Inverter Water Pump</div>
+              <div class="part-vehicle">2004–2015 Toyota Prius 1.5L & 1.8L Hybrid Synergy Drive</div>
+            </div>
+            <span class="roi-badge">317% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$28.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$135.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$12.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$89.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Driver side under inverter beneath left headlight</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>10mm ratcheting wrench, hose pinch pliers</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>6 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Extremely High (50+ sold/month)</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> OEM Aisin pumps are mandatory because cheap aftermarket pumps throw P0A93 diagnostic trouble codes. Test impeller spin with your finger before pulling.
+          </div>
+        </div>
+
+        <!-- Part 12 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">12. Toyota Prius Combination Meter Instrument Display</div>
+              <div class="part-vehicle">2004–2009 Gen 2 & 2010–2015 Gen 3 Prius</div>
+            </div>
+            <span class="roi-badge">331% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$35.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$175.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$18.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$116.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Center upper dashboard cowl</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>Phillips #2, nylon pry bar, 10mm socket</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>8 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> The famous "black screen of death" strikes millions of Priuses due to capacitor degradation. Rebuilders and owners buy good cores continuously.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. INTERIOR SWITCHES & CLUSTERS -->
+    <section id="interior">
+      <h2><span>🪟</span> 7. High-Demand Interior Switches & Assemblies</h2>
+      <div class="part-grid">
+
+        <!-- Part 13 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">13. Honda Accord / CR-V Driver Master Window Switch</div>
+              <div class="part-vehicle">2008–2017 Honda Accord, Civic, CR-V, Odyssey</div>
+            </div>
+            <span class="roi-badge">252% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$18.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$78.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$7.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$45.50</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Driver door armrest bezel</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>Plastic trim tool</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>90 seconds</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Pop up from rear edge of armrest. Never use metal tools. Always grab these—they take 90 seconds, weigh 8 ounces, and sell every single week.
+          </div>
+        </div>
+
+        <!-- Part 14 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">14. GM GMT800 Steering Wheel Audio/Cruise Button Pods</div>
+              <div class="part-vehicle">2003–2006 Chevy Silverado, Tahoe, Suburban, GMC Yukon</div>
+            </div>
+            <span class="roi-badge">310% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$12.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$58.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$5.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$36.50</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Face of steering wheel surrounding airbag</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>Small flathead or plastic pick</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>2 minutes for all 4 pods</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> The rubberized paint rubs off every truck. If you find buttons where the icons are crisp and unpeeled, grab them! Sells in 48 hours.
+          </div>
+        </div>
+
+        <!-- Part 15 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">15. Digital Dual-Zone Climate Control Head Panel</div>
+              <div class="part-vehicle">2003–2007 Chevy Tahoe, Silverado, Suburban</div>
+            </div>
+            <span class="roi-badge">229% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$24.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$95.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$12.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$55.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Center dash below radio</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>Bare hands (pull bezel), 7mm socket</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>3 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Tilt steering column down, shift gear lever to 1st, yank dash trim off with your hands, unbolt two 7mm screws. Done!
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. RADAR & CAMERAS -->
+    <section id="radar">
+      <h2><span>📡</span> 8. ADAS Cameras & Blind Spot Radar Sensors</h2>
+      <div class="part-grid">
+
+        <!-- Part 16 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">16. GM Side Blind Zone Alert Radar Modules (Pair)</div>
+              <div class="part-vehicle">2007–2014 Chevy Tahoe, Suburban, GMC Yukon, Cadillac Escalade</div>
+            </div>
+            <span class="roi-badge">380% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$50.00 (pair)</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$240.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$12.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$168.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Behind rear bumper cover corners</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>10mm, 7mm sockets</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>7 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Dealer charges $600+ each. They suffer corrosion from road salt. If the case isn't swollen or cracked, this is one of the quickest $150+ flips in the yard.
+          </div>
+        </div>
+
+        <!-- Part 17 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">17. Subaru EyeSight Dual Forward Stereo Camera Assembly</div>
+              <div class="part-vehicle">2014–2019 Subaru Outback, Forester, Legacy, Crosstrek</div>
+            </div>
+            <span class="roi-badge">425% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$35.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$210.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$14.00</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$151.00</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Inside top of windshield flanking rearview mirror</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>Phillips #2, trim pry tool</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>4 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>Medium/High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Unclip plastic overhead trim, remove two small screws, unclip the connector. Do NOT touch the camera lenses directly with bare fingers.
+          </div>
+        </div>
+
+        <!-- Part 18 -->
+        <div class="part-card">
+          <div class="part-header">
+            <div>
+              <div class="part-title">18. Denso / Koito Xenon HID Ballast & Igniter</div>
+              <div class="part-vehicle">2005–2015 Toyota, Lexus, Subaru, Mazda</div>
+            </div>
+            <span class="roi-badge">380% ROI</span>
+          </div>
+          <div class="numbers-row">
+            <div><div class="num-label">LKQ Price</div><div class="num-val" style="color: var(--red);">$14.00</div></div>
+            <div><div class="num-label">eBay Sold Avg</div><div class="num-val" style="color: var(--cyan);">$72.00</div></div>
+            <div><div class="num-label">Est. Shipping</div><div class="num-val">$6.50</div></div>
+            <div><div class="num-label">Net Profit</div><div class="num-val" style="color: var(--green);">+$48.50</div></div>
+          </div>
+          <div class="intel-grid">
+            <div class="intel-item"><span>📍 Location:</span> <strong>Bolted underneath the headlight housing</strong></div>
+            <div class="intel-item"><span>🔧 Tools:</span> <strong>T20 Torx, Phillips, 10mm</strong></div>
+            <div class="intel-item"><span>⏱️ Pull Time:</span> <strong>3 minutes</strong></div>
+            <div class="intel-item"><span>⚡ Sales Velocity:</span> <strong>High</strong></div>
+          </div>
+          <div class="part-tip">
+            <strong>💡 Pro-Tip:</strong> Look at damaged or smashed headlights! The yard might scrap the crushed lamp housing, but the aluminum ballast underneath is usually 100% mint. Sells in padded mailers for cheap shipping.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. SHIPPING & LISTING -->
+    <section id="shipping">
+      <h2><span>📦</span> 9. Packaging, Shipping & eBay Listing Secrets</h2>
+      <p>Finding high-margin gold at LKQ is only half the battle. How you list and ship determines your net margins and seller rating:</p>
+      <ol>
+        <li>
+          <strong>The Exact OEM Part Number in Title:</strong>
+          Write down the part number and hardware revision exactly as stamped (e.g. <code>39186-STX-A01</code> or <code>12589463</code>). Mechanics and owners search by part number, not "silver module thing".
+        </li>
+        <li>
+          <strong>Include Donor Vehicle Year, Make, Model & VIN:</strong>
+          In your eBay description, state: <em>"Tested OEM part carefully pulled from a running 2008 Acura MDX (VIN: 2HNYD28...) with no corrosion."</em> Buyers trust parts from real vehicles 10x more than mystery junkyard lots.
+        </li>
+        <li>
+          <strong>USPS Ground Advantage & Padded Flat Rate:</strong>
+          90% of these modules weigh between 8 oz and 2.5 lbs. Ship small items via USPS Ground Advantage ($5.50–$8.50) in 8x10 bubble mailers, or heavy ECUs/amps in a USPS Priority Flat Rate Padded Envelope ($9.85).
+        </li>
+        <li>
+          <strong>Offer a 30-Day Hassle-Free Return:</strong>
+          Offering 30-day returns boosts eBay search rank by over 35%. Because LKQ gives you an exchange warranty or store credit, your personal downside is virtually zero.
+        </li>
+      </ol>
+    </section>
+
+    <!-- SUMMARY -->
+    <div style="background: linear-gradient(135deg, rgba(0,242,254,0.1), rgba(16,185,129,0.1)); border: 2px solid var(--cyan); border-radius: 16px; padding: 32px; text-align: center; margin-top: 60px;">
+      <h3 style="color: #fff; font-size: 24px; margin-bottom: 12px;">Ready to Scan the Yard with YardScout?</h3>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 24px;">
+        Instead of memorizing part numbers, pull up YardScout on your phone.
+        Point your camera at the VIN barcode and let our instant offline engine calculate your profit before you pick up a ratchet.
+      </p>
+      <a href="index.html" style="background: linear-gradient(135deg, #00f2fe, #10b981); color: #070a11; font-weight: 800; font-size: 15px; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-block; box-shadow: 0 0 24px rgba(0,242,254,0.4);">
+        ⚡ Back to YardScout Showcase & Alpha Access
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
